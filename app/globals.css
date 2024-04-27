@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SF";
+  src: url("../fonts/SFPRODISPLAYMEDIUM.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "SF", sans-serif;
+}
+
+@layer utilities {
+  .primary-pink {
+    @apply text-[#EB568E];
+  }
+
+  .primary-blue {
+    @apply text-[#144EE3];
+  }
+
+  .bg-primary-pink {
+    @apply bg-[#EB568E];
+  }
+
+  .bg-primary-blue {
+    @apply bg-[#144EE3];
+  }
+
+  .background-black {
+    @apply bg-[#0B101B] dark:bg-white
+  }
+
+  .background-gray {
+    @apply bg-[#181E29]
+  }
+
+  .background-light {
+    @apply bg-[#C9CED6]
+  }
+
+  .small-13-normal {
+    @apply text-[13px];
+  }
+
+  .basic-13-normal {
+    @apply text-[16px];
+  }
+
+  .basic-16-bold {
+    @apply text-[16px] font-bold;
+  }
+
+  .basic-16-normal {
+    @apply text-[];
+  }
+
+  .title-24-normal {
+    @apply text-[24px];
+  }
+
+  .title-24-bold {
+    @apply text-[24px] font-bold;
+  }
+
+  .large-60-bold {
+    @apply text-[60px] font-extrabold;
+  }
+
+  .title-gradient {
+    @apply bg-gradient-to-r from-[#144EE3] via-[#EB568E] to-[#144EE3] inline-block text-transparent bg-clip-text;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}

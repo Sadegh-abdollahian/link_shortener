@@ -31,19 +31,23 @@ body {
   }
 
   .background-black {
-    @apply bg-[#0B101B]
+    @apply bg-[#0B101B];
   }
 
   .background-gray {
-    @apply bg-[#181E29]
+    @apply bg-[#181E29];
   }
 
   .background-light {
-    @apply bg-[#C9CED6]
+    @apply bg-[#C9CED6];
   }
 
   .small-13-normal {
     @apply text-[13px];
+  }
+
+  .small-13-bold {
+    @apply text-[13px] font-bold;
   }
 
   .basic-13-normal {
@@ -66,12 +70,20 @@ body {
     @apply text-[24px] font-bold;
   }
 
+  .title-35-bold {
+    @apply text-[35px] font-extrabold;
+  }
+
   .large-60-bold {
-    @apply text-[60px] font-extrabold;
+    @apply text-[60px] font-mono tracking-tight;
   }
 
   .title-gradient {
-    @apply bg-gradient-to-r from-[#144EE3] via-[#EB568E] to-[#144EE3] inline-block text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-[#144EE3] via-[#EB568E] to-[#144EE3] text-transparent bg-clip-text;
+  }
+
+  .logo-gradient {
+    @apply bg-gradient-to-r from-[#EB568E] to-[#144EE3] text-transparent bg-clip-text;
   }
 
   .flex-center {
@@ -80,5 +92,9 @@ body {
 
   .flex-between {
     @apply flex justify-between items-center;
+  }
+
+  .box-shadow {
+    box-shadow: 10px 10px 24px -7px rgba(20,78,227,0.9);;
   }
 }

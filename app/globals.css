@@ -35,11 +35,23 @@ body {
   }
 
   .background-gray {
-    @apply bg-[#181E29];
+    @apply bg-[#181e29];
   }
 
   .background-light {
     @apply bg-[#C9CED6];
+  }
+
+  .text-black {
+    @apply text-[#0B101B];
+  }
+
+  .text-gray {
+    @apply text-[#181E29];
+  }
+
+  .text-light {
+    @apply text-[#C9CED6];
   }
 
   .small-13-normal {
@@ -50,17 +62,13 @@ body {
     @apply text-[13px] font-bold;
   }
 
-  .basic-13-normal {
+  .basic-16-normal {
     @apply text-[16px];
   }
 
   .basic-16-bold {
     @apply text-[16px] font-bold;
-  }
-
-  .basic-16-normal {
-    @apply text-[];
-  }
+  } 
 
   .title-24-normal {
     @apply text-[24px];
@@ -75,7 +83,7 @@ body {
   }
 
   .large-60-bold {
-    @apply text-[60px] font-mono tracking-tight;
+    @apply text-[60px] font-extrabold;
   }
 
   .title-gradient {
@@ -95,6 +103,6 @@ body {
   }
 
   .box-shadow {
-    box-shadow: 10px 10px 24px -7px rgba(20,78,227,0.9);;
+    box-shadow: 10px 10px 24px -7px rgba(20, 78, 227, 0.9);
   }
 }

@@ -1,4 +1,10 @@
+// fontawesome imports
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
+// clerk
 import { ClerkProvider } from "@clerk/nextjs";
+// nextjs
 import { Inter } from "next/font/google";
 import "./globals.css";
 

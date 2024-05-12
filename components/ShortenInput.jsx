@@ -5,14 +5,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { mongodbConnect } from "@/lib/mongodb";
+import { createLink } from "@/lib/actions/link.action";
+import { useUser } from "@clerk/nextjs";
+import { generateHash } from "@/lib/utils";
 
 const ShortenInput = () => {
-  const [url, setUrl] = useState();
+  const [url, setUrl] = useState("");
 
-  const handleSubmit = async (e) => {
+  const { user } = useUser();
+
+  const createShortLink = (e) => {
     e.preventDefault();
-    console.log(url);
+    // create a random hash from the url
+    const hashOfUrl = generateHash(url);
+    console.log("ok !");
+    createLink(url, hashOfUrl, user.id);
   };
 
   return (
@@ -27,7 +34,7 @@ const ShortenInput = () => {
       </div>
       <Button
         type="submit"
-        onClick={handleSubmit}
+        onClick={createShortLink}
         className="bg-primary-blue basic-16-normal box-shadow h-[50px] min-w-[50px] rounded-full text-white focus:bg-[#113eb0]"
       >
         <FontAwesomeIcon

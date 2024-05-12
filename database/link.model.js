@@ -16,6 +16,7 @@ const linkSchema = new mongoose.Schema({
     required: true,
     immutable: true,
   },
+  // availableClicks is for later ...
   availableClicks: {
     type: Number,
     required: true,
@@ -28,4 +29,4 @@ const linkSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Link", linkSchema);
+module.exports = mongoose.models.Link || mongoose.model("Link", linkSchema);

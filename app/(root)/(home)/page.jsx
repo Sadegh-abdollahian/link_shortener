@@ -3,6 +3,7 @@ import bg from "../../../public/assets/images/background.png";
 import "../../globals.css";
 import ShortenInput from "@/components/ShortenInput";
 import HistoryTable from "@/components/HistoryTable";
+import { SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 
 function Home() {
@@ -32,12 +33,14 @@ function Home() {
         {/* History table */}
         <HistoryTable />
         {/* fixed footer */}
-        <div className="flex-center basic-16-normal max-md:small-13-normal absolute bottom-0 h-[80px] w-full gap-x-1 bg-neutral-900/30 text-white backdrop-blur-lg">
-          <Link href="/" className="text-[#144EE3] underline">
-            Register Now
-          </Link>
-          to enjoy Unlimited History
-        </div>
+        <SignedOut>
+          <div className="flex-center basic-16-normal max-md:small-13-normal absolute bottom-0 h-[80px] w-full gap-x-1 bg-neutral-900/30 text-white backdrop-blur-lg">
+            <Link href="/" className="text-[#144EE3] underline">
+              Register Now
+            </Link>
+            to enjoy Unlimited History
+          </div>
+        </SignedOut>
       </div>
     </div>
   );

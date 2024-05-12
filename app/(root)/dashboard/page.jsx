@@ -1,6 +1,8 @@
-import React from "react";
+import { connectDB } from "@/lib/mongoose";
 
 const Dashboard = () => {
+  connectDB()
+
   return <div>Dashboard</div>;
 };
 

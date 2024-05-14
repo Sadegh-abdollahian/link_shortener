@@ -18,8 +18,9 @@ const ShortenInput = () => {
     e.preventDefault();
     // create a random hash from the url
     const hashOfUrl = generateHash(url);
-    console.log("ok !");
     createLink(url, hashOfUrl, user.id);
+    setUrl("")
+    window.location.reload()
   };
 
   return (
@@ -27,6 +28,7 @@ const ShortenInput = () => {
       <div className="flex w-full items-center justify-center gap-x-5 max-sm:gap-x-3">
         <FontAwesomeIcon icon={faLink} size="lg" style={{ color: "#C9CED6" }} />
         <Input
+          value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="Enter the link here"
           className="background-gray basic-16-normal max-sm:small-13-normal w-[500px] border-none text-[#C9CED6] caret-[#EB568E] placeholder:text-[#C9CED6] focus-visible:ring-0 focus-visible:ring-offset-0 max-md:w-9/12 max-sm:w-8/12"
